@@ -1,0 +1,38 @@
+{
+  "name": "forma-floor-planner",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k \"vite --host 127.0.0.1\" \"tsx watch server/index.ts\"",
+    "build": "tsc -b && vite build",
+    "start": "tsx server/index.ts",
+    "test": "tsx --test tests/*.test.ts",
+    "test:browser": "npm run build && node tests/browser.mjs",
+    "format": "prettier --write src shared server tests vite.config.ts package.json tsconfig.json index.html"
+  },
+  "dependencies": {
+    "@fontsource/manrope": "^5.2.8",
+    "express": "^5.1.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "three": "^0.180.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@types/three": "^0.180.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "agent-browser": "^0.21.0",
+    "concurrently": "^9.2.0",
+    "playwright-core": "^1.63.0",
+    "prettier": "^3.9.6",
+    "tsx": "^4.20.0",
+    "typescript": "~5.9.2",
+    "vite": "^7.1.0"
+  }
+}
